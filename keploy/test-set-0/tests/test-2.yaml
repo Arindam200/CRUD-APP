@@ -1,0 +1,42 @@
+version: api.keploy.io/v1beta2
+kind: Http
+name: test-2
+spec:
+    metadata: {}
+    req:
+        method: POST
+        proto_major: 1
+        proto_minor: 1
+        url: http://localhost:4500/api/v1/product/new
+        header:
+            Accept: '*/*'
+            Accept-Encoding: gzip, deflate, br
+            Connection: keep-alive
+            Content-Length: "82"
+            Content-Type: application/json
+            Host: localhost:4500
+            Postman-Token: 64b4f4b0-fe40-4764-a723-cca4a424c8f2
+            User-Agent: PostmanRuntime/7.33.0
+        body: "{\r\n    \"name\":\"Arindam\",\r\n    \"description\":\"helloworld2\",\r\n    \"price\": 100232\r\n}"
+        body_type: ""
+    resp:
+        status_code: 201
+        header:
+            Connection: keep-alive
+            Content-Length: "132"
+            Content-Type: application/json; charset=utf-8
+            Date: Wed, 18 Oct 2023 19:35:41 GMT
+            Etag: W/"84-85qJFB6O6DXzDTuXRGtPkIxj3fA"
+            Keep-Alive: timeout=5
+            X-Powered-By: Express
+        body: '{"success":true,"newProduct":{"name":"Arindam","description":"helloworld2","price":100232,"_id":"6530338d5df2a7696a2e0a6c","__v":0}}'
+        body_type: ""
+        status_message: ""
+        proto_major: 0
+        proto_minor: 0
+    objects: []
+    assertions:
+        noise:
+            - header.Date
+    created: 1697657746
+curl: "curl --request POST \\\n  --url http://localhost:4500/api/v1/product/new \\\n  --header 'Content-Type: application/json' \\\n  --header 'User-Agent: PostmanRuntime/7.33.0' \\\n  --header 'Accept: */*' \\\n  --header 'Postman-Token: 64b4f4b0-fe40-4764-a723-cca4a424c8f2' \\\n  --header 'Host: localhost:4500' \\\n  --header 'Accept-Encoding: gzip, deflate, br' \\\n  --header 'Connection: keep-alive' \\\n  --data '{\r\n    \"name\":\"Arindam\",\r\n    \"description\":\"helloworld2\",\r\n    \"price\": 100232\r\n}'"
